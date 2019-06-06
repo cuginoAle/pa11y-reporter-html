@@ -1,6 +1,6 @@
 {
-  "name": "pa11y-reporter-html",
-  "version": "1.0.0",
+  "name": "@cuginoale/pa11y-report-html",
+  "version": "1.0.1",
   "description": "An HTML reporter for Pa11y",
   "keywords": [
     "html",
@@ -10,10 +10,12 @@
   "author": "Team Pa11y",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pa11y-reporter-html/pa11y-reporter-html.git"
+    "url": "git+https://github.com/cuginoAle/pa11y-reporter-html.git"
   },
-  "homepage": "https://github.com/pa11y-reporter-html/pa11y-reporter-html",
-  "bugs": "https://github.com/pa11y-reporter-html/pa11y-reporter-html/issues",
+  "homepage": "https://github.com/cuginoAle/pa11y-reporter-html",
+  "bugs": {
+    "url": "https://github.com/cuginoAle/pa11y-reporter-html/issues"
+  },
   "license": "LGPL-3.0",
   "engines": {
     "node": ">=8"
@@ -33,5 +35,9 @@
   "main": "./lib/reporter.js",
   "scripts": {
     "test": "make ci"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }

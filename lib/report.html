@@ -80,6 +80,24 @@
 			border-color: #b6d0ff;
 		}
 
+		.screenshot_wrapper {
+			padding: 20px;
+			margin: auto;
+			display: flex;
+			align-items: center;
+    	flex-direction: column;
+		}
+
+		.screenshot_wrapper h2{
+			margin-bottom: 10px;
+			border-bottom: 2px solid #d8d8d8;
+		}
+
+		.screenshot_img {
+			display: block;
+			max-width: 100%;
+		}
+
 	</style>
 
 </head>
@@ -105,8 +123,15 @@
 			</li>
 			{{/issues}}
 		</ul>
-
 	</div>
+	{{#screenshot}}
+	<div class="screenshot_wrapper">
+		<div>
+			<h2>Screenshot:</h2>
+			<img class="screenshot_img" src="{{screenshot}}" alt="page screenshot">
+		</div>
+	</div>
+	{{/screenshot}}
 
 </body>
 </html>

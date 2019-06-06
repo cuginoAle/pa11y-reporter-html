@@ -10,12 +10,14 @@ An HTML reporter for [Pa11y 5.0](https://github.com/pa11y/pa11y).
 
 ## Table Of Contents
 
-- [Requirements](#requirements)
-- [Usage](#usage)
-  - [Command-Line](#command-line)
-  - [JavaScript](#javascript)
-- [Contributing](#contributing)
-- [License](#license)
+- [Pa11y HTML Reporter](#pa11y-html-reporter)
+  - [Table Of Contents](#table-of-contents)
+  - [Requirements](#requirements)
+  - [Usage](#usage)
+    - [Command-Line](#command-line)
+    - [JavaScript](#javascript)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 
 ## Requirements
@@ -46,10 +48,14 @@ Assuming you've installed both Pa11y and Pa11y HTML Reporter:
 ```js
 const html = require('pa11y-reporter-html');
 const pa11y = require('pa11y');
+const options = {
+  screenCapture: `path/to/screenshot.png`,
+}
 
-pa11y('http://example.com').then(async results => {
+pa11y('http://example.com', options]).then(async results => {
     // Returns a string with the results formatted as HTML
-    const htmlResults = await html.results(results);
+    // includes the page screen shot if provided
+    const htmlResults = await html.results(results, 'path/to/screenshot.png');
     console.log(htmlResults);
 });
 ```
